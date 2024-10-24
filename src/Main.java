@@ -14,7 +14,7 @@ public class Main {
         int n = scanner.nextInt();
         Product[] vect = new Product[n];
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < vect.length; i++) {
             System.out.println("Enter the product name ");
             String name = scanner.next();
 
@@ -23,10 +23,10 @@ public class Main {
             vect[i] = new Product(name, price);
         }
         double sum = 0.0;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < vect.length; i++) {
             sum += vect[i].getPrice();
         }
-        double avg = sum / n;
+        double avg = sum / vect.length;
         System.out.printf("Average price: %.2f%n", avg);
 
     }
